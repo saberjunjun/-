@@ -1,0 +1,157 @@
+/* swiper样式 */
+.swiper-container {
+  position: absolute;
+  top: 2.2rem;
+  width: 100%;
+  height: 2rem;
+  background-color: #fff;
+  font-size: .7rem;
+  border-top: 1px solid #f3f3f1;
+  border-bottom: 1px solid #f3f3f1;
+}
+
+.swiper-container .swiper-slide {
+  text-align: center;
+}
+
+.swiper-container a {
+  position: relative;
+  display: inline-block;
+  color: #333;
+  line-height: 2rem;
+}
+
+.swiper-container a:after {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #2d73c3;
+  z-index: 999;
+}
+
+.swiper-container .swiper-active a {
+  color: #2d73c3;
+}
+
+.swiper-container .swiper-active a:after {
+  display: block;
+}
+
+/* 卡片样式调整 */
+.content {
+  padding-top: 4.2rem;
+  background-color: #fff;
+}
+.content-declare-list {
+  padding-top: 0px;
+  margin-bottom: 0px;
+}
+
+.content-declare-card-num {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid #f3f3f1;
+}
+
+.content-declare-card-title {
+  margin-top: .5rem;
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+  background-color: #2d73c3;
+  font-size: .9rem;
+}
+
+/* 详情内容窗口 */
+.service-detail {
+  position: relative;
+  margin-bottom: 5px;
+  padding-top: 2.2rem;
+}
+
+.service-detail h3 {
+  font-size: .55rem;
+  color: #888;
+  padding-left: 15px;
+  background-color: #fff;
+}
+
+.service-detail .weui-cells:after {
+  border-bottom: none;
+}
+
+.service-detail h3 span {
+  font-size: 1rem;
+}
+
+.service-detail .include-money {
+  background-color: #fff;
+  padding-left: 15px;
+  color: #888;
+  font-size: .55rem;
+  padding-bottom: 10px;
+}
+
+#detail-content {
+  z-index: 501;
+}
+
+#detail-content .header {
+  position: fixed;
+}
+
+.introduce {
+  background-color: #fff;
+}
+
+.introduce-title {
+  line-height: 2rem;
+  height: 2rem;
+  padding-left: 15px;
+  border-bottom: 1px solid #e7e7e7;
+  color: #3b3b3b;
+  font-size: .68rem;
+}
+
+.introduce-title span {
+  display: inline-block;
+  height: 100%;
+  border-bottom: 1px solid #2d73c3;
+}
+
+.introduce p {
+  line-height: 1.8rem;
+  font-size: .68rem;
+  color: #333;
+  text-indent: 2em;
+  padding: 0 15px;
+}
+
+#detail-content .weui-btn_primary {
+  border-radius: 0;
+  background-color: #2d73c3;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: .68rem;
+}
+
+.header-back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 25px;
+}
+
+.header-back img {
+  width: 100%;
+}
+
+.service-detail .service-detail-map {
+  text-align: center;
+  padding: 1.2rem 0;
+}

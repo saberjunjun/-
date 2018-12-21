@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>注册</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link rel="stylesheet" href="../jqweui/weui.min.css" />
+    <link rel="stylesheet" href="../jqweui/jquery-weui.min.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body ontouchstart>
+    <div class="page-group">
+      <!-- 你的html代码 -->
+        <div class="weui-tab">
+            <div class="weui-tab__bd">
+                <div class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <div class="login">
+                        <img src="../image/logo.jpg" alt="logo"/>
+                        <h2 class="login-title">敏问</h2>
+                        <form action="">
+                            <div class="account">
+                                <div class="account-input">
+                                    <input type="text" placeholder="企业名称" class="companyName"/>
+                                    <div class="clearValue"></div>
+                                </div>
+                                <div class="account-input account-tel">
+                                    <input type="text" placeholder="手机号" maxlength="11" class="tel"/>
+                                    <div class="clearValue"></div>
+                                    <a href="javascript:;" class="weui-btn weui-btn_warn">获取验证码</a>
+                                </div>
+                                <div class="account-input">
+                                    <input type="text" placeholder="短信验证码" class="auth" maxlength="4"/>
+                                    <div class="clearValue"></div>
+                                </div>
+                                <div class="account-input">
+                                    <input type="text" placeholder="登录密码" class="loginPsd"/>
+                                    <div class="clearValue"></div>
+                                </div>
+                                <div class="account-input">
+                                    <input type="text" placeholder="确认密码" class="surePsd"/>
+                                    <div class="clearValue"></div>
+                                </div>
+                            </div>
+                            <a href="javascript:;" class="weui-btn weui-btn_warn">注册</a>
+                        </form>
+                        <a href="./me.html" class="register-desc">已有注册账号，去登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../jqweui/jquery-2.1.4.js"></script>
+    <script src="../jqweui/fastclick.js"></script>
+    <script>
+      $(function() {
+        FastClick.attach(document.body)
+      })
+    </script>
+    <script src="../jqweui/jquery-weui.min.js"></script>
+  </body>
+</html>

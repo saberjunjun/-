@@ -1,0 +1,153 @@
+body {
+    background-color: #efefef;
+}
+
+.header {
+    position: relative;
+}
+
+.content {
+    padding: 1.5rem 0;
+    background: #fff url('../image/bg-company-1.jpg') center center no-repeat;
+    color: #fff;
+}
+
+.content h2 {
+    font-size: .9rem;
+    margin-bottom: .65rem;
+}
+
+.content .updateTime {
+    display: inline-block;
+    padding: 3px 5px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: .5rem;
+    margin-bottom: .65rem;
+}
+
+.content .updateTime img {
+    vertical-align: middle;
+    width: 13px;
+}
+
+.content .legalPeople {
+    font-size: .5rem;
+}
+
+.content .legalPeople .gray {
+    margin-top: .3rem;
+    color: #d3d2d2;
+}
+
+.content .legalPeople .center {
+    position: relative;
+}
+
+.content .legalPeople .center:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 1px;
+    height: 1.2rem;
+    background-color: #fff;
+}
+
+.content .legalPeople .center:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 1px;
+    height: 1.2rem;
+    background-color: #fff;
+}
+
+.support-list {
+    padding: 10px 7px 0 7px;
+    font-size: .55rem;
+}
+
+.support-item {
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(229, 229, 229, 1);
+    padding: 3px 10px;
+}
+
+.support-title span {
+    font-size: .8rem;
+    padding-left: 5px;
+    border-left: 5px solid #2d73c3;
+}
+
+.support-item-company {
+    width: 45%;
+}
+
+/* 项目推荐tabs导航样式覆盖 */
+.weui-navbar {
+    height: 40px;
+    line-height: 40px;
+}
+
+.weui-navbar a {
+    padding: 0;
+    font-size: .7rem;
+}
+
+.weui-navbar .weui-navbar__item {
+    background-color: rgba(0, 0, 0, 0, 0.8)
+}
+
+.weui-tab, .weui-tab .weui-tab__bd, .weui-tab .weui-tab__bd-item{
+    height: auto;
+}
+
+.weui-tab .weui-tab__bd {
+    padding-top: 40px;
+}
+
+.header-back {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 25px;
+}
+
+.header-back img {
+    width: 100%;
+}
+
+.support-item-more {
+    text-align: center!important;
+    height: 1.5rem!important;
+    line-height: 1.5rem!important;
+}
+
+.support-item {
+    height: 1.1rem;
+    line-height: 1.1rem; 
+}
+
+.support-item .weui-cells{
+    margin-top: 0;
+    font-size: .55rem;
+}
+
+.support-item .weui-cells:before, .support-item .weui-cells:after {
+    height: 0;
+    border: none;
+}
+
+.support-item .weui-cell {
+    line-height: 1.1rem; 
+    padding: 0;
+}
+
+.support-item .red {
+    font-size: .55rem;
+}

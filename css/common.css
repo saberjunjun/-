@@ -1,0 +1,153 @@
+/* 页面最大宽度居中显示 */
+body {
+  max-width: 640px;
+  margin: 0 auto;
+}
+  
+  /* 清除输入框默认样式 */
+input[type="text"], textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius:0;
+  border: none;
+}
+  
+input[type="text"]:focus, textarea:focus {
+  outline: none;
+}
+
+/* 强调数字样式 */
+.number {
+  font-size: .7rem;
+  color: #ff7411;
+  font-style: normal;
+}
+
+.red {
+  font-size: .7rem;
+  color: #FF0000;
+  font-style: normal;
+}
+
+/* 匹配文字样式 */
+.matchText {
+  color: #2d73c3!important;
+}
+
+/* 超出省略号 */
+.nowrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* 水平居左 */
+.tal {
+  text-align: left;
+}
+
+/* 水平居右 */
+.tar {
+  text-align: right;
+}
+
+/* 顶部导航icon样式覆盖 */
+.weui-tabbar__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* 底部导航文字颜色样式覆盖 */
+.weui-tabbar__item.weui-bar__item--on .weui-tabbar__label {
+  color: #2d73c3;
+}
+
+/* 提示窗口中文字样式覆盖 */
+.weui-toast_content {
+  font-size: .7rem;
+}
+
+/* 搜索框样式bug修复 */
+.weui-search-bar__box {
+  height: auto;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  line-height: 2.2rem;
+  background-color: #fff;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #333;
+}
+
+.header-back, .header-collection {
+  position: relative;
+}
+
+.header-back img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+}
+
+.header-collection img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+}
+
+.content {
+  padding-top: 2.2rem;
+  text-align: center;
+  background-color: #f3f3f1;
+  padding-bottom: 53px;
+}
+
+/* 卡片 */
+.content-declare-list {
+  background-color: #fff;
+  padding-top: 3px;
+  margin-bottom: 5px;
+}
+
+.content-declare-card-item {
+  padding: 0 10px;
+}
+
+.content-declare-card-item img {
+  width: 110px;
+  height: 55px;
+}
+
+.content-declare-card-num {
+  font-size: 0.7rem;
+  margin-left: 15px;
+}
+
+.content-declare-card-num .content-declare-card-numL {
+  text-align: left;
+}
+
+.content-declare-card-num .content-declare-card-numR {
+  text-align: right;
+}
+
+.content-declare-card-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-height: 0.9rem;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  font-size: 0.6rem;
+  color: #b7b7b7;
+  text-align: left;
+}

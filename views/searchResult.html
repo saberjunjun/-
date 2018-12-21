@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>搜索-查咨询</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link rel="stylesheet" href="../jqweui/weui.min.css" />
+    <link rel="stylesheet" href="../jqweui/jquery-weui.min.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/searchResult.css" />
+  <body ontouchstart>
+    <!-- 搜索框 -->
+    <div class="weui-search-bar weui-search-bar_focusing" id="searchBar">
+      <form class="weui-search-bar__form" action="#">
+        <div class="weui-search-bar__box">
+          <i class="weui-icon-search"></i>
+          <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+          <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+        </div>
+        <label class="weui-search-bar__label" id="searchText" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+          <i class="weui-icon-search"></i>
+          <span>搜索</span>
+        </label>
+      </form>
+      <a href="javascript:" class="weui-search-bar__cancel-btn matchText" id="searchCancel">返回</a>
+    </div>
+    <!-- 搜索内容 -->
+    <div class="search-content">
+      <div class="weui-flex search-item" dataId="1">
+        <div class="search-company nowrap">
+            高质量影像<span class="matchText">测</span>量系统（深圳）有限公司有限公司有限公司有限公司有限公司
+        </div>
+        <div class="weui-flex__item search-itemR">
+          <p class='number'>0.23万</p>
+          <p>已经获得资助</p>
+        </div>
+      </div>
+      <div class="weui-flex search-item" dataId="2">
+        <div class="search-company">
+            高质量影像<span class="matchText">测</span>量系统（深圳）有限公司
+        </div>
+        <div class="weui-flex__item search-itemR">
+          <p class='number'>0.23万</p>
+          <p>已经获得资助</p>
+        </div>
+      </div>
+    </div>
+    <script src="../jqweui/jquery-2.1.4.js"></script>
+    <script src="../jqweui/fastclick.js"></script>
+    <script>
+      $(function() {
+        FastClick.attach(document.body)
+      })
+    </script>
+    <script src="../jqweui/jquery-weui.min.js"></script>
+    <script>
+      var name = localStorage.searchName
+      $("#searchInput").val(name)
+      // 返回上一页
+      $("#searchCancel").click(function(){
+        window.history.go(-1);
+      }) 
+      // 详情页面
+      $(".search-item").click(function(){
+        var id = $(this).attr('dataId')
+        window.location.href= './searchDetail.html?id=' + id
+      })
+    </script>
+  </body>
+</html>

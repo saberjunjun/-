@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>我的</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link rel="stylesheet" href="../jqweui/weui.min.css" />
+    <link rel="stylesheet" href="../jqweui/jquery-weui.min.css" />
+    <link rel="stylesheet" href="../animate/animate.min.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body ontouchstart>
+    <div class="page-group">
+      <!-- 你的html代码 -->
+      <div class="login">
+        <img src="../image/logo.jpg" alt="logo"/>
+        <h2 class="login-title">敏问</h2>
+        <form action="">
+          <div class="account">
+            <div class="account-input">
+                <input type="text" placeholder="账号/手机号码" class="account"/>
+                <div class="clearValue"></div>
+            </div>
+            <div class="account-input">
+                <input type="text" placeholder="登陆密码" class="psd"/>
+                <div class="clearValue"></div>
+            </div>
+          </div>
+          <a href="javascript:;" class="weui-btn weui-btn_warn">登录</a>
+        </form>
+        <div class="foot weui-flex">
+          <div class="weui-flex__item tal"><a href="./register.html">立即注册</a></div>
+          <div class="weui-flex__item tar"><a href="./forgetPasswd.html">忘记密码</a></div>
+        </div>
+      </div>
+      <!-- 底部导航 -->
+      <div class="weui-tabbar animated bounceInUp">
+        <a href="../index.html" class="weui-tabbar__item">
+          <div class="weui-tabbar__icon">
+            <img src="../image/nav1.png" alt="" />
+          </div>
+          <p class="weui-tabbar__label">查资助</p>
+        </a>
+        <a href="./findServiceManage.html" class="weui-tabbar__item">
+          <div class="weui-tabbar__icon">
+            <img src="../image/nav4.png" alt="" />
+          </div>
+          <p class="weui-tabbar__label">找服务</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item weui-bar__item--on">
+          <div class="weui-tabbar__icon">
+            <img src="../image/nav5.png" alt="" />
+          </div>
+          <p class="weui-tabbar__label">我的</p>
+        </a>
+      </div>
+    </div>
+    <script src="../jqweui/jquery-2.1.4.js"></script>
+    <script src="../jqweui/fastclick.js"></script>
+    <script>
+      $(function() {
+        FastClick.attach(document.body)
+      })
+    </script>
+    <script src="../jqweui/jquery-weui.min.js"></script>
+  </body>
+</html>

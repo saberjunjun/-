@@ -1,0 +1,28 @@
+/* 搜索内容 */
+.weui-search-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.search-content {
+    padding-top: 54px;
+    padding-bottom: 5px;
+    background-color: #f3f3f1;
+}
+
+.search-item {
+    padding: 5px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    font-size: .7rem;
+}
+
+.search-company {
+    width: 70%;
+}
+
+.search-itemR {
+    text-align: right;
+}
