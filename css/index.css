@@ -15,26 +15,42 @@
 }
 
 .content-search h1 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
-.content-search h2 {
-  font-size: .75rem;
+.content-search h1 span {
+  position: relative;
+  padding-left: 1.2rem;
 }
 
-.content-title-line {
+.content-search h1 span:after {
+  content: 'TM';
+  display: block;
   position: absolute;
-  top: 50%;
-  width: 2.8rem;
-  height: 2px;
-  background-color: #06c1ae;
+  top: -.4rem;
+  left: 0;
+  font-size: 12px;
+}
+
+.content-search h2 {
+  font-size: .8rem;
 }
 
 .content-title-left, .content-title-right {
   position: relative;
 }
 
+.content-title-line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-45%);
+  width: 3rem;
+}
+
+.content-title-line img {
+  width: .8rem;
+}
 
 .content-title-left .content-title-line {
   right: .5rem;
@@ -64,8 +80,8 @@
 
 .content-search-item input {
   width: 80%;
-  line-height: 1.8rem;
-  padding-left: 1.2rem;
+  height: 1.8rem;
+  padding: .2rem 0 .2rem 1.2rem;
   font-size: .6rem;
 }
 
@@ -375,69 +391,4 @@
   color: #333;
   text-indent: 2em;
   padding: 0 15px;
-}
-
-#free-content {
-  z-index: 520;
-}
-
-#free-content .header {
-  position: relative;
-  padding: 0 .75rem;
-  background-color: #2d73c3;
-  color: #fff;
-}
-
-#free-content .header .free-del img {
-  position: absolute;
-  top: 50%;
-  right: .75rem;
-  transform: translateY(-50%);
-  width: 25px;
-}
-
-.free-detail {
-  background-color: #fff;
-}
-
-.free-detail h3 {
-  font-size: 0.8rem;
-  padding: 0.75rem 0.75rem 1.5rem 0.75rem;
-}
-
-.free-detail .free-detail-item {
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 0.5rem;
-  font-size: .7rem;
-}
-
-.free-detail .free-detail-item input, .free-detail .free-detail-item textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #dedede;
-  border-radius: 4px;
-}
-
-.free-detail .free-detail-item input {
-  height: 2rem;
-}
-
-.free-detail .free-detail-item textarea {
-  min-height: 5rem;
-}
-
-.free-detail .free-detail-item .submit-btn {
-  width: 100%;
-  color: #fff;
-  border-radius: 0.25rem;
-  height: 2.2rem;
-  line-height: 2.2rem;
-  font-size: .7rem;
-}
-
-/* 样式继承方式，很特别的用法 */
-.free-detail-item textarea, .free-detail-item input {
-  color: inherit;
-  font: inherit;
 }
