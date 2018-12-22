@@ -63,6 +63,21 @@
     font: inherit;
 }
 
-.qcode span, .qcode img {
-    vertical-align: text-bottom;
+.qcode img {
+    width: 5.5rem;
+    height: 5.5rem;
+}
+
+.qcode .company-detail {
+    font-size: .55rem;
+}
+
+.qcode .company-detail h2 {
+    font-size: .7rem;
+    font-weight: bolder;
+    padding: .2rem 0 .5rem .4rem;
+}
+
+.qcode .company-detail p {
+    padding-left: .4rem; 
 }
