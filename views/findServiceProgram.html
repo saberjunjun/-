@@ -174,10 +174,9 @@
       </div>
     </div>
     <!-- 内容详情窗口 -->
-    <div id="detail-content" class="weui-popup__container">
+    <!-- <div id="detail-content" class="weui-popup__container">
       <div class="weui-popup__overlay"></div>
       <div class="weui-popup__modal">
-        <!-- 内容 -->
         <h2 class="header">
           <a href="javascript:;" class="header-back"><img class='close-popup' src="../image/back.png" alt=""></a>
           项目申报服务详情
@@ -208,7 +207,7 @@
         </div>
         <a href="./freeAssessment.html" class="weui-btn weui-btn_primary">我要办理</a>
       </div>
-    </div>
+    </div> -->
     <script src="../jqweui/jquery-2.1.4.js"></script>
     <script src="../jqweui/fastclick.js"></script>
     <script>
@@ -228,7 +227,8 @@
     <script>
       // 点击查看详情
       $('.content-declare-list').click(function(){
-        $('#detail-content').popup();
+        window.location.href = './findServiceDetail.html?id=' + $(this).attr('dataid')
+        // $('#detail-content').popup();
       })
     </script>
   </body>

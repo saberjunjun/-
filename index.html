@@ -167,7 +167,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="content-declare-list" dataId='2'>
+                  <div class="content-declare-list" dataId='1'>
                     <h2><span>企业管理提升</span></h2>
                     <div class="content-declare-card">
                       <h3>龙华区科技专项资金</h3>
@@ -227,10 +227,9 @@
       </div>
     </div>
     <!-- 内容详情窗口 -->
-    <div id="detail-content" class="weui-popup__container">
+    <!-- <div id="detail-content" class="weui-popup__container">
       <div class="weui-popup__overlay"></div>
       <div class="weui-popup__modal">
-        <!-- 内容 -->
         <div class="index-page">
           <h2 class="header weui-flex">
             <a href="javascript:;" class="header-back weui-flex__item"><img class="close-popup" src="./image/back.png" alt=""></a>
@@ -286,7 +285,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <script src="./jqweui/jquery-2.1.4.js"></script>
     <script src="./jqweui/fastclick.js"></script>
     <script>
@@ -328,50 +327,74 @@
         $('#content-declare-new').hide()
       })
       // 内容详情
-      $('.content-declare-list').click(function(){
-        $('#detail-content').popup();
+      $('.content-declare-data').on('click', '.content-declare-list', function(){
+        window.location.href="./views/indexDetail.html?id=" + $(this).attr('dataId')
       })
       // 最近发布更多
       var newPage = 2, newLimit = 3, closePage = 2, closeLimit = 3
       $('.content-declare-new-more p').click(function(){
         $.showLoading('加载中');
         // 循环数据
-        var data = {
-          id: 1,
-          type: '类型',
-          title: '标题',
-          image: './image/20170726114833-8147.jpg',
-          maxNumber: '3000万',
-          day: 20,
-          desc: '测试测试',
-          department: '科学技术部',
-          time: '2018-01-08'
-        }
-        // 组装dom
-        var dom = `<div class="content-declare-list" dataId='${data.id}'>
-                  <h2><span>${data.type}</span></h2>
-                  <div class="content-declare-card">
-                    <h3>${data.title}</h3>
-                    <div class="content-declare-card-item weui-flex">
-                      <img src="${data.image}" alt="技术创新" />
-                      <div class="weui-flex__item content-declare-card-num">
-                        <div class="weui-flex">
-                          <div class="weui-flex__item content-declare-card-numL">最高<i class="red">${data.maxNumber}</i></div>
-                          <div class="weui-flex__item content-declare-card-numR"><i class="red">${data.day}</i>天后截止</div>
-                        </div>
-                        <div class="content-declare-card-desc">
-                          ${data.desc}
+        var data = [
+          {
+            id: 1,
+            type: '类型',
+            title: '标题',
+            image: './image/20170726114833-8147.jpg',
+            maxNumber: '3000万',
+            day: 20,
+            desc: '测试测试',
+            department: '科学技术部',
+            time: '2018-01-08'
+          },
+          {
+            id: 2,
+            type: '类型',
+            title: '标题',
+            image: './image/20170726114833-8147.jpg',
+            maxNumber: '3000万',
+            day: 20,
+            desc: '测试测试',
+            department: '科学技术部',
+            time: '2018-01-08'
+          },
+          {
+            id: 3,
+            type: '类型',
+            title: '标题',
+            image: './image/20170726114833-8147.jpg',
+            maxNumber: '3000万',
+            day: 20,
+            desc: '测试测试',
+            department: '科学技术部',
+            time: '2018-01-08'
+          }
+        ]
+        // 添加数据
+        for(var i = 0;i < data.length; i++){
+          // 组装dom
+          var dom = `<div class="content-declare-list" dataId='${data[i].id}'>
+                    <h2><span>${data[i].type}</span></h2>
+                    <div class="content-declare-card">
+                      <h3>${data[i].title}</h3>
+                      <div class="content-declare-card-item weui-flex">
+                        <img src="${data[i].image}" alt="技术创新" />
+                        <div class="weui-flex__item content-declare-card-num">
+                          <div class="weui-flex">
+                            <div class="weui-flex__item content-declare-card-numL">最高<i class="red">${data[i].maxNumber}</i></div>
+                            <div class="weui-flex__item content-declare-card-numR"><i class="red">${data[i].day}</i>天后截止</div>
+                          </div>
+                          <div class="content-declare-card-desc">
+                            ${data[i].desc}
+                          </div>
                         </div>
                       </div>
+                      <div class="content-declare-time weui-flex">
+                        <div class="weui-flex__item content-declare-timeL">${data[i].department}</div>
+                        <div class="weui-flex__item content-declare-timeR">${data[i].time}</div>
+                      </div>
                     </div>
-                    <div class="content-declare-time weui-flex">
-                      <div class="weui-flex__item content-declare-timeL">${data.department}</div>
-                      <div class="weui-flex__item content-declare-timeR">${data.time}</div>
-                    </div>
-                  </div>
-                </div>`
-        // 添加数据
-        for(var i = 0;i < newLimit; i++){
+                  </div>`
           $('#content-declare-new .content-declare-data').append(dom)
         }
         newPage ++; // 页数增加
@@ -380,42 +403,66 @@
       $('.content-declare-close-more p').click(function(){
         $.showLoading('加载中');
         // 循环数据
-        var data = {
-          id: 1,
-          type: '类型',
-          title: '标题',
-          image: './image/20170726114833-8147.jpg',
-          maxNumber: '3000万',
-          day: 20,
-          desc: '测试测试',
-          department: '科学技术部',
-          time: '2018-01-08'
-        }
-        // 组装dom
-        var dom = `<div class="content-declare-list" dataId='${data.id}'>
-                  <h2><span>${data.type}</span></h2>
+        var data = [
+          {
+            id: 1,
+            type: '类型',
+            title: '标题',
+            image: './image/20170726114833-8147.jpg',
+            maxNumber: '3000万',
+            day: 20,
+            desc: '测试测试',
+            department: '科学技术部',
+            time: '2018-01-08'
+          },
+          {
+            id: 2,
+            type: '类型',
+            title: '标题',
+            image: './image/20170726114833-8147.jpg',
+            maxNumber: '3000万',
+            day: 20,
+            desc: '测试测试',
+            department: '科学技术部',
+            time: '2018-01-08'
+          },
+          {
+            id: 3,
+            type: '类型',
+            title: '标题',
+            image: './image/20170726114833-8147.jpg',
+            maxNumber: '3000万',
+            day: 20,
+            desc: '测试测试',
+            department: '科学技术部',
+            time: '2018-01-08'
+          }
+        ]
+        // 添加数据
+        for(var i = 0;i < data.length; i++){
+          // 组装dom
+        var dom = `<div class="content-declare-list" dataId='${data[i].id}'>
+                  <h2><span>${data[i].type}</span></h2>
                   <div class="content-declare-card">
-                    <h3>${data.title}</h3>
+                    <h3>${data[i].title}</h3>
                     <div class="content-declare-card-item weui-flex">
-                      <img src="${data.image}" alt="技术创新" />
+                      <img src="${data[i].image}" alt="技术创新" />
                       <div class="weui-flex__item content-declare-card-num">
                         <div class="weui-flex">
-                          <div class="weui-flex__item content-declare-card-numL">最高<i class="red">${data.maxNumber}</i></div>
-                          <div class="weui-flex__item content-declare-card-numR"><i class="red">${data.day}</i>天后截止</div>
+                          <div class="weui-flex__item content-declare-card-numL">最高<i class="red">${data[i].maxNumber}</i></div>
+                          <div class="weui-flex__item content-declare-card-numR"><i class="red">${data[i].day}</i>天后截止</div>
                         </div>
                         <div class="content-declare-card-desc">
-                          ${data.desc}
+                          ${data[i].desc}
                         </div>
                       </div>
                     </div>
                     <div class="content-declare-time weui-flex">
-                      <div class="weui-flex__item content-declare-timeL">${data.department}</div>
-                      <div class="weui-flex__item content-declare-timeR">${data.time}</div>
+                      <div class="weui-flex__item content-declare-timeL">${data[i].department}</div>
+                      <div class="weui-flex__item content-declare-timeR">${data[i].time}</div>
                     </div>
                   </div>
                 </div>`
-        // 添加数据
-        for(var i = 0;i < closeLimit; i++){
           $('#content-declare-close .content-declare-data').append(dom)
         }
         closePage ++; // 页数增加

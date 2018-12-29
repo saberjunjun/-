@@ -98,6 +98,7 @@
 
 #detail-content {
   z-index: 501;
+  background-color: #efeff4;
 }
 
 #detail-content .header {
