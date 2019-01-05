@@ -6,6 +6,8 @@
 /* 企业搜索 */
 .content { 
   background-color: #f3f3f1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .content-search {
