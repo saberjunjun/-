@@ -72,7 +72,7 @@ input[type="text"]:focus, textarea:focus {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -109,6 +109,7 @@ input[type="text"]:focus, textarea:focus {
   text-align: center;
   background-color: #f3f3f1;
   padding-bottom: 53px;
+  overflow-y: scroll;
 }
 
 /* 卡片 */
@@ -150,4 +151,9 @@ input[type="text"]:focus, textarea:focus {
   font-size: 0.6rem;
   color: #b7b7b7;
   text-align: left;
+}
+
+/* 底部样式覆盖 */
+.weui-tabba {
+  position: fixed;
 }
