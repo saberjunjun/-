@@ -806,7 +806,8 @@ body {
 .weui-tab__bd .weui-tab__bd-item {
   display: none;
   height: 100%;
-  overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .weui-tab__bd .weui-tab__bd-item.weui-tab__bd-item--active {
   display: block;
