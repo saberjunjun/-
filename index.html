@@ -237,6 +237,13 @@
     <script src="./jqueryCountup/jquery.waypoints.min.js"></script>
     <script src="./jqueryCountup/jquery.countup.min.js"></script>
     <script>
+      // 兼容安卓手机
+      $("#searchName").focus(function(){
+          $(".weui-tabbar").hide()
+      })
+      $("#searchName").blur(function(){
+          $(".weui-tabbar").show()
+      })
       // 数字动态滚动
       $('.number').countUp({
           delay: 10,
